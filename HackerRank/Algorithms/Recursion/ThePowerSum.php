@@ -26,3 +26,7 @@ function powerSumHelper($X, $N, $l){
   }
   return $counter;
 }
+
+function powerSum($X, $N){
+  return powerSumHelper($X, $N, 0);
+}
