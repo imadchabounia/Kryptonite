@@ -11,7 +11,7 @@ function toys($w){
   
   for($i = 1; $i < count($w); $i++){
     // so if an element $w[$i] is greater than a start_point+4 so he should be inside a new container
-    if($w[$i] > $end){
+    if($w[$i] > $end_e){
       $start_e = $w[$i];
       $end_e   = $start_e+4;
       $counter++;
