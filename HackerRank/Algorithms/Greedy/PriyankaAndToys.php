@@ -14,7 +14,7 @@ function toys($w){
     if($w[$i] > $end){
       $start_e = $w[$i];
       $end_e   = $start_e+4;
-      $counter++
+      $counter++;
     }
   }
  
