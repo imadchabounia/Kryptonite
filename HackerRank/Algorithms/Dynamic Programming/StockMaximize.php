@@ -7,7 +7,7 @@ function stockmax($prices){
 
     for($i = count($prices)-1; $i > -1; $i--){
         
-        if($prices[$i] >+ $max){
+        if($prices[$i] > $max){
 
             $max = $prices[$i];
         }
