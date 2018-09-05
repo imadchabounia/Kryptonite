@@ -13,13 +13,13 @@ function candies($n, $arr){
       $candies[$i] = $base;
     }
     
-    for($i = 1; $i < $n; $i++){ // going from left to right (asc)
+    for($i = 1; $i < $n; $i++){ // asc
       if($arr[$i] > $arr[$i-1]){
         $candies[$i] += $candies[$i-1];
       }
     }
     
-    for($i = $n-2; $i >= 0; $i--){ // going from right to left (desc)
+    for($i = $n-2; $i >= 0; $i--){ // desc
       if($arr[$i] > $arr[$i+1] && $candies[$i] < $candies[$i+1]+1){
         $candies[$i] = $candies[$i+1]+1;
       }
