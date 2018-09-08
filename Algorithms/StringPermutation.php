@@ -23,3 +23,6 @@ function permute($string, $left, $right){
   }
 }
 
+// test 
+$string = 'bla'; 
+permute($string, 0, strlen($string));
