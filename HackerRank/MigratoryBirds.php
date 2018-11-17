@@ -11,10 +11,10 @@ function migratoryBirds($arr){
     
     if($freq[$arr[$i]-1] > $max){
     $max = $freq[$arr[$i]-1];
-      $selected_id = $arr[$i];
+    $selected_id = $arr[$i];
+    }elseif($freq[$arr[$i]-1] == $max && $arr[$i] < $selected_id){
+    $selected_id = $arr[$i];
     }
-    
-    
   }
   
   return $selected_id;
