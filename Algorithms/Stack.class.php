@@ -17,7 +17,6 @@ class Stack implements ds{
   //properties
   private $top = -1;
   private $space = [];
-  private $object;
   //methods
   public function push($data)
   {
