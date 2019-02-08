@@ -151,7 +151,6 @@ int main() {
 int x;
 int sum = 0;
 int count = 0;
-int target = 0;
 int length;
 int data;
 
@@ -193,19 +192,16 @@ push2(data);
 while(sum < x){
 
 sum = sum + Top1();
-target = Top1();
 pop1();
 count = count + 1;
 }
 
 sum = sum - target;
 count = count - 1;
-target = 0;
 
 while(sum < x){
 
 sum = sum + Top2();
-target = Top2();
 pop2();
 count = count + 1;
 }
