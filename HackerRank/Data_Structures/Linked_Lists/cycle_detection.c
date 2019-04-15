@@ -5,7 +5,7 @@
  * };
  *
  */
-/* solution using Floyd's Cycle Detection Algorithm
+/* solution using Floyd's Cycle Detection Algorithm */
 bool solveHelper(struct SinglyLinkedListNode *tortoise, struct SinglyLinkedListNode *hare) {
   if (hare == tortoise)
     return true;
