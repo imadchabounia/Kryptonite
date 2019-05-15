@@ -1,55 +1,41 @@
-
-#include <bits\stdc++.h>
+#include <bits/stdc++.h>
 
 using namespace std;
 
-int sum = 0;
+long long solve_helper(long long n) {
 
-int super_digit(int x){
-	
-	if(x/10 == 0){
-		
-		return x;
-	
-	}else{
-		
-	return super_digit(x%10+super_digit(x/10));
+  if (n / 10 == 0)
+    return n;
 
-	
-	}
-	
-}
-// using loop
-int solve_super_digit(int p, int k){
-	
-	for(long long i = 0; i < k; i++){
-		
-		sum += super_digit(p);
-		
-	}
-	
-	sum = super_digit(sum);
-	
-	return sum;
+  long long sum = 0;
+
+  while (n != 0) {
+    sum += n % 10;
+    n /= 10;
+  }
+
+  return solve_helper(sum);
 }
 
-// Recursively 
-int solve_super_digit2(int p, int k){
-	
-	if(k <= 0){
-		
-		return 0;
-		
-	}
-	
-	return super_digit(p) + solve_super_digit2(super_digit(p), k-1);
+long long superDigit(string n, long long k) {
+
+  long long sum = 0;
+
+  for (int i = 0; i < n.length(); i++) {
+    sum += (n[i] - '0');
+  }
+
+  sum *= k;
+
+  return solve_helper(sum);
 }
 
-int main(){
-	// simple test cases
-	int p = 9875;
-	int k = 4;
-	
-	cout << solve_super_digit2(p, k);
+int main(int argc, char const *argv[]) {
 
+  long long n, k;
+	cin >> n >> k;
+	cout << superDigit(n, k);
+	
+  return 0;
 }
+
