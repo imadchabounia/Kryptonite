@@ -6,7 +6,7 @@ vector<long long int> arr;
 long long int l;
 //long memo[100000000000]; too large , we'll use a hashmap (hashtable)
 
-map<long long int, long long int> memo;
+unordered_map<long long int, long long int> memo;
 
 long long int solve_helper(long long int n){
 
