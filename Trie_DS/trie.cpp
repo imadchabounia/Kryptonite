@@ -76,5 +76,11 @@ public:
     }
     return root;
   }
-
 };
+
+
+int main(int argc, char const *argv[]) {
+  Trie trie;
+  node* root = trie.make_trie({"foo", "bar", "kryptonie", "flash", "dynamic", "dog", "cat"});
+  return 0;
+}
